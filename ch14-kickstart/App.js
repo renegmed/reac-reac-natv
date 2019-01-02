@@ -1,24 +1,16 @@
 import styles from './styles';
 import React from 'react';
 import { View, Text } from 'react-native';
+import Box from './Box';
 
-/*
+// Notice how the rendered JSX is much less verbose?
+// The "<Box>" component encapsulates a lot of the
+// extraneous style code.
 
-  Renders three "column" sections. The "container"
-  view is styled so that it's children flow from
-  the top of the screen, to the bottom of the screen 
- 
-*/
 export default() => (
   <View style={styles.container} >
-    <View style={styles.box}>
-      <Text style={styles.boxText}>#1</Text>
-    </View>
-    <View style={styles.box}>
-      <Text style={styles.boxText}>#2</Text>
-    </View>
-    <View style={styles.box}>
-      <Text style={styles.boxText}>#3</Text>
-    </View>
+    <Box>#1</Box>
+    <Box>#2</Box>
+    <Box>#3</Box>
   </View>
 );

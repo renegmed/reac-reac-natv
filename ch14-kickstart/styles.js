@@ -33,10 +33,12 @@ const styles = StyleSheet.create({
             android: { paddingTop: StatusBar.currentHeight }
         })
     },
-    box: {
-        width: 100,
+    box: {       
         height: 100,
         justifyContent: 'center',
+        // Instead of giving the flexbox a width, we
+        // tell it to "stretch" to fill all available space.
+        alignSelf: 'stretch',
         alignItems: 'center',
         backgroundColor: 'lightgray',
         borderWidth: 1,
