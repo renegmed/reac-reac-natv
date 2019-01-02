@@ -3,14 +3,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import Box from './Box';
 
-// Notice how the rendered JSX is much less verbose?
-// The "<Box>" component encapsulates a lot of the
-// extraneous style code.
+// Renders a single row with two boxes that stretch
+// from top to bottom.
 
 export default() => (
   <View style={styles.container} >
     <Box>#1</Box>
-    <Box>#2</Box>
-    <Box>#3</Box>
+    <Box>#2</Box> 
   </View>
 );

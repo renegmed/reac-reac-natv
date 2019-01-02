@@ -1,31 +1,10 @@
 import { Platform, StyleSheet, StatusBar } from 'react-native';
-
-/*
-
-
-   Platform.select() code is an example of a case where you need 
-   to implement a workaround for differences in the platform. 
-   For example, if StatusBar.currentHeight were available on iOS 
-   and Android, you wouldn't need to call Platform.select().
-
-   The flex and flexDirection properties of container enable the 
-   layout of the rows to flow from top to bottom. 
-   
-   The alignItems and justifyContent properties align the child elements
-   to the center of the container and add space around them, respectively.
-
-*/
-
+ 
 const styles = StyleSheet.create({
-    container: { 
-        // Enables the flex layout model...
-        flex: 1,
-        // Tells the flexbox to render children
-        // from top to bottom
-        flexDirection: 'column',
-        // Aligns children to the center on the container
-        alignItems: 'center',
-        // Defines the spacing relative to other children
+    container: {  
+        flex: 1, 
+        flexDirection: 'row', 
+        alignItems: 'center', 
         justifyContent: 'space-around',
         backgroundColor: 'ghostwhite',
         ...Platform.select({
@@ -34,10 +13,8 @@ const styles = StyleSheet.create({
         })
     },
     box: {       
-        height: 100,
-        justifyContent: 'center',
-        // Instead of giving the flexbox a width, we
-        // tell it to "stretch" to fill all available space.
+        width: 100,
+        justifyContent: 'center', 
         alignSelf: 'stretch',
         alignItems: 'center',
         backgroundColor: 'lightgray',
