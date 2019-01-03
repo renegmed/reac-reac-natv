@@ -3,14 +3,14 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-const Settings = ({ navigation }) => (
+const News = ({ navigation }) => (
     <View style={styles.container}>
-        <Text>Settings Content</Text>
+        <Text>News Content</Text>
     </View>
 );
- 
-Settings.navigationOptions = {
-    title: 'Settings'
+
+News.navigationOptions = {
+    title: 'News'
 }
 
-export default Settings;
+export default News;

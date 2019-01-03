@@ -1,13 +1,25 @@
  
 import React from 'react';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import {  createBottomTabNavigator, 
+          createDrawerNavigator, 
+          createAppContainer 
+} from 'react-navigation';
+import { Platform } from 'react-native';
 import Home from './Home';
-import Details from './Details';
+import News from './News';
+import Settings from './Settings';
 
-const AppNavigator = createStackNavigator(
+// Use Platform utility from react-native to decide which of these two functions to use.
+const { createNavigator } = Platform.select({
+  ios: { createNavigator: createBottomTabNavigator },
+  android: { createNavigator: createDrawerNavigator }
+});
+
+const AppNavigator = createNavigator(
   {
     Home,
-    Details
+    News,
+    Settings
   },
   { initialRouteName: 'Home' }
 ); 
