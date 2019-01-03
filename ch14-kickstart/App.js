@@ -1,17 +1,16 @@
 import styles from './styles';
 import React from 'react';
-import { View, StatusBar } from 'react-native';
+import { View } from 'react-native';
 import Box from './Box';
+import StatusBar from './StatusBar';
+ 
 
-// An array of 10 numbers, representing the grid
-// sections to render.
-const boxes = new Array(10).fill(null).map( (v, i) => i + 1);
-
-
+// Renders a single row with two boxes that stretch
+// from top to bottom.
 export default() => (
   <View style={styles.container} >
-    <StatusBar hidden={false} />
-    { /* Renders 10 "<Box>" sections */}
-    { boxes.map(i => <Box key={i}>#{i}</Box>)}    
+    <StatusBar />
+    <Box>#1</Box>
+    <Box>#2</Box>
   </View>
 );
