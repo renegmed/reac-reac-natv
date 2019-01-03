@@ -4,23 +4,24 @@ const styles = StyleSheet.create({
     container: {  
         flex: 1, 
         flexDirection: 'row', 
-        alignItems: 'center', 
-        justifyContent: 'space-around',
+        flexWrap: 'wrap',
+        alignItems: 'center',  
         backgroundColor: 'ghostwhite',
         ...Platform.select({
             ios: { paddingTop: 20 },
             android: { paddingTop: StatusBar.currentHeight }
         })
     },
-    box: {       
+    box: {
+        height: 100,       
         width: 100,
-        justifyContent: 'center', 
-        alignSelf: 'stretch',
+        justifyContent: 'center',  
         alignItems: 'center',
         backgroundColor: 'lightgray',
         borderWidth: 1,
         borderStyle: 'dashed',
-        borderColor: 'darkslategray'
+        borderColor: 'darkslategray',
+        margin: 10
     },
     boxText: {
         color: 'darkslategray',
