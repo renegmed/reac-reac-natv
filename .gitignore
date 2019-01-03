@@ -2,9 +2,11 @@ ch14-kickstart/node_modules
 ch14-kickstart/package-lock.json
 ch14-kickstart/yarn.lock
 ch14-kickstart/*.swp
- 
+ch14-kickstart/.expo
+
 ch15-navigating-bet-screens/node_modules
 ch15-navigating-bet-screens/package-lock.json
 ch15-navigating-bet-screens/yarn.lock
 ch15-navigating-bet-screens/*.swp
+ch15-navigating-bet-screens/.expo
 
