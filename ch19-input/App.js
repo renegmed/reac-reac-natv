@@ -1,53 +1,31 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import { fromJS } from 'immutable';
 
 import styles from './styles';
-import Switch from './Switch';
 
-export default class TogglingOnAndOff extends Component {
+// Imports our own platform-independent "DatePicker"
+// and "TimePicker" components.
+import DatePicker from './DatePicker';
+import TimePicker from './TimePicker';
+
+export default class CollectingDateTimeInput extends Component {
   state = {
-    data: fromJS({
-      first: false,
-      second: false
-    })
+    date: new Date(),
+    time: new Date()
   };
 
-  // Getter for "Immutable.js" state data...
-  get data() {
-    return this.state.data;
-  }
-
-  // Setter for "Immutable.js" state data...
-  set data(data) {
-    this.setState({ data });
-  }
-
   render() {
-    const { first, second } = this.state.data.toJS();
-
     return (
       <View style={styles.container}>
-        {/* When this switch is turned on, the
-             second switch is disabled. */}
-        <Switch
-          label="Disable Next Switch"
-          value={first}
-          disabled={second}
-          onValueChange={v => {
-            this.data = this.data.set('first', v);
-          }}
+        <DatePicker
+          label="Pick a date, any date:"
+          date={this.state.date}
+          onDateChange={date => this.setState({ date })}
         />
-
-        {/* When this switch is turned on, the
-             first switch is disabled. */}
-        <Switch
-          label="Disable Previous Switch"
-          value={second}
-          disabled={first}
-          onValueChange={v => {
-            this.data = this.data.set('second', v);
-          }}
+        <TimePicker
+          label="Pick a time, any time:"
+          date={this.state.time}
+          onTimeChange={time => this.setState({ time })}
         />
       </View>
     );

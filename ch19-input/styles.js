@@ -5,12 +5,17 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'ghostwhite',
+    backgroundColor: 'ghostwhite'
   },
 
-  customSwitch: {
-    alignItems: 'center',
-    margin: 10,
+  datePickerContainer: {
+    width: 260,
+    margin: 20
   },
+
+  datePickerLabel: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
 });
   
